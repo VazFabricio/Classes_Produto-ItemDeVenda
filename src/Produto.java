@@ -5,7 +5,7 @@ public class Produto {
     private String categoria;
     private String marca;
     private String modelo;
-    private double preco;
+    private static double preco;
     private double altura;
     private double largura;
     private double comprimento;
@@ -65,7 +65,7 @@ public class Produto {
         return modelo;
     }
 
-    public double getPreco() {
+    public double getPreco(){
         return preco;
     }
 
@@ -83,5 +83,13 @@ public class Produto {
 
     public double getPeso() {
         return peso;
+    }
+
+    public void setPreco(double preco) {
+        Produto.preco = preco;
+    }
+
+    public static double PrecoCalculo() {
+        return preco;
     }
 }
